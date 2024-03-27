@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#font-titulo {
+  font-family: "bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --------- HEADER -------------*/
+
 header {
   background-color: black;
 }
@@ -17,6 +31,12 @@ header {
   margin-right: 20px;
 }
 
+#navbarDropdown {
+  font-family: "filicudi-color-pride", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .menu-item:last-child {
   margin-right: 0;
 }
@@ -29,6 +49,7 @@ header {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   display: none;
   z-index: 1;
+  width: 300px;
 }
 
 .dropdown-menu a {
@@ -36,6 +57,7 @@ header {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
@@ -46,13 +68,38 @@ header {
   display: block;
 }
 
-.image-section {
-  position: relative;
-  overflow: hidden; /* Oculta el contenido que se desborda */
+/* Estilo para el enlace Servicios */
+.menu-item a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.image-section img {
-  width: 100%;
+.menu-item a:hover {
+  color: red;
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu .dropdown-item {
+  font-size: 16px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #444;
+}
+
+/* --------- BIENVENIDA -------------*/
+
+.image-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.frente-image {
+  border-radius: 0;
 }
 
 .welcome-message-outside {
@@ -66,7 +113,6 @@ header {
   text-align: center;
 }
 
-/* Degradado más oscuro hacia la parte inferior */
 .image-section::before {
   content: "";
   position: absolute;
@@ -79,7 +125,7 @@ header {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 1)
-  ); /* Gradiente desde negro semitransparente a negro sólido */
+  );
 }
 
 .welcome-message-outside {
@@ -96,26 +142,30 @@ header {
 .animated-text {
   font-size: 48px;
   color: #fff;
-  letter-spacing: 2px; /* Espaciado entre letras */
-  animation: pulse 2s infinite alternate; /* Animación pulsante */
-  font-family: "Workbench", sans-serif;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite alternate;
+  font-family: "barber-outline", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: red;
 }
 
 .subtitulo {
-  font-family: "Workbench", sans-serif;
-  font-size: 70%;
+  font-family: "orbitron", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 50%;
   margin-bottom: 30px;
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.1);
   }
-}
+} */
 
 .btn {
   padding: 10px 20px;
@@ -127,11 +177,310 @@ header {
   background-color: red;
   color: #fff;
   transition: background-color 0.3s ease;
-  font-family: "Workbench", sans-serif;
+  font-family: "orbitron", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .btn:hover {
   background-color: black;
+}
+
+/* --------- SEGUROS -------------*/
+
+#seguros {
+  background-color: black;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#seguros h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.section-description {
+  font-size: 24px;
+  margin-bottom: 40px;
+  font-family: "cooper-black-std", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.insurance-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.insurance-list li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 50px;
+  background-color: #ff5722;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f44336;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* --------- CHAPA Y PINTURA -------------*/
+
+#chapa-pintura {
+  background-color: #f44336;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#chapa-pintura h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.section-description {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+#chapa-pintura p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: "cooper-black-std", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #f44336;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* --------- BATERIAS -------------*/
+
+#baterias {
+  background-color: #000;
+}
+
+#baterias div h2 {
+  color: white;
+  text-align: center;
+  background-color: #000;
+  font-size: 350%;
+  padding-top: 30px;
+}
+
+.bateria-image {
+  width: 70%;
+  height: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.div-titulo-bateria {
+  background-color: #000;
+}
+
+.carousel-item {
+  background-color: #000;
+  color: #fff;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.carousel-caption h3 {
+  font-size: 150%;
+  text-align: left;
+  font-family: "utopia-std-headline", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: "cooper-black-std", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.carousel-caption a.btn {
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: red;
+  color: #fff;
+  align-self: flex-end; /* Alinear al final del contenedor */
+}
+
+.carousel-caption a.btn:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+#carru {
+  border-radius: 25px;
+  margin: 25px;
+}
+
+#carru:hover {
+  background-color: #222;
+  border-radius: 10px;
+}
+
+/* --------- EQUIMAMIENTOS ESPECIALES -------------*/
+
+#equipamientos-especiales {
+  background-color: #f44336;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#equipamientos-especiales h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.section-description {
+  font-size: 24px;
+  margin-bottom: 40px;
+  font-family: "cooper-black-std", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #f44336;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.hover-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hover-container img {
+  transition: transform 0.3s ease;
+}
+
+.hover-container:hover img {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.hover-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-container:hover .hover-content {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.hover-text {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  font-family: fantasy;
+  font-size: 250%;
+  font-weight: bold;
+  font-style: normal;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.hover-container img.expanded {
+  transform: scale(1.5);
+}
+
+/* --------- 4 x 4 -------------*/
+
+#servicios-4x4 {
+  background-color: #000;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#servicios-4x4 h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.servicios-list {
+  list-style: none;
+  padding: 0;
+}
+
+.servicios-list li {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.servicios-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* --------- FONTS -------------*/
@@ -147,3 +496,5 @@ header {
   font-weight: normal;
   font-style: normal;
 }
+
+@import url("https://use.typekit.net/zyr5clh.css");

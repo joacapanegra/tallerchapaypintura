@@ -18,6 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Workbench&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/zyr5clh.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="./funciones.js"></script>
   </head>
   <body>
     <header class="header">
@@ -31,8 +34,6 @@
           <div class="col-md-6">
             <nav class="navigation text-right">
               <ul class="menu">
-                <li class="menu-item"><a href="#servicios">Servicios</a></li>
-                <li class="menu-item"><a href="#galeria">Galería</a></li>
                 <li class="menu-item dropdown">
                   <a
                     href="#"
@@ -42,15 +43,19 @@
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
-                    >Secciones</a
+                    >Servicios</a
                   >
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Opción 1</a>
-                    <a class="dropdown-item" href="#">Opción 2</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Opción 3</a>
-                  </div>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#seguros">Seguros</a>
+                      <a class="dropdown-item" href="#chapa-pintura">Chapa y Pintura</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#baterias">Baterias</a>
+                      <a class="dropdown-item" href="#equipamientos-especiales">Equipamientos</a>
+                      <a class="dropdown-item" href="#">4 x 4</a>
+                    </div>
                 </li>
+                <li class="menu-item" id="navbarDropdown""><a href="#servicios">Nosotros</a></li>
               </ul>
             </nav>
           </div>
@@ -71,10 +76,228 @@
       <img
         src="img/frente.png"
         alt="Fachada del Taller"
-        class="img-fluid smaller-image"
+        class="img-fluid frente-image"
       />
     </section>
 
-    <!-- Resto del contenido -->
+    <section id="seguros" class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 id="font-titulo">Seguros</h2>
+            <p class="section-description">
+              ¡Protege tu vehículo con nuestros servicios de seguros
+              personalizados!
+            </p>
+            <ul class="insurance-list">
+              <li>Seguro de responsabilidad civil</li>
+              <li>Seguro contra accidentes</li>
+              <li>Seguro de robo</li>
+              <li>Seguro de daños a terceros</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Obtener Cotización</a>
+          </div>
+          <div class="col-md-6">
+            <img src="img/seguros.jpg" alt="Seguros" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="chapa-pintura" class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 id="font-titulo">Chapa y Pintura</h2>
+            <p class="section-description">
+              Descubre nuestros servicios de chapa y pintura de alta calidad.
+            </p>
+            <p>
+              En nuestro taller, ofrecemos una amplia gama de servicios de chapa
+              y pintura para restaurar y mejorar la apariencia de tu vehículo.
+              Ya sea que necesites reparaciones menores o una renovación
+              completa, nuestro equipo de expertos está aquí para ayudarte.
+            </p>
+            <a href="#galeria" class="btn btn-primary">Ver Galería</a>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="img/chapa-pintura.jpg"
+              alt="Chapa y Pintura"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="baterias" class="section">
+      <div id="div-titulo-bateria">
+        <h2 class="text-white" id="font-titulo">Baterías</h2>
+      </div>
+      <div class="container">
+        <div id="carouselBaterias" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row align-items-center" id="carru">
+                <div class="col-md-6 order-md-2">
+                  <img
+                    src="img/bateria.jpg"
+                    class="d-block img-fluid bateria-image"
+                    alt="Batería 1"
+                  />
+                </div>
+                <div class="col-md-6 order-md-1">
+                  <div
+                    class="carousel-caption d-flex flex-column justify-content-between h-100 align-items-start"
+                  >
+                    <h3 class="mb-0">Batería de larga duración</h3>
+                    <p class="mb-3">
+                      Esta batería está diseñada para proporcionar un
+                      rendimiento óptimo y una larga vida útil.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver Más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center" id="carru">
+                <div class="col-md-6 order-md-2">
+                  <img
+                    src="img/bateria.jpg"
+                    class="d-block img-fluid bateria-image"
+                    alt="Batería 2"
+                  />
+                </div>
+                <div class="col-md-6 order-md-1">
+                  <div
+                    class="carousel-caption d-flex flex-column justify-content-between h-100 align-items-start"
+                  >
+                    <h3 class="mb-0">Batería de alta potencia</h3>
+                    <p class="mb-3">
+                      Esta batería es ideal para aplicaciones de alto consumo de energía.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver Más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center" id="carru">
+                <div class="col-md-6 order-md-2">
+                  <img
+                    src="img/bateria.jpg"
+                    class="d-block img-fluid bateria-image"
+                    alt="Batería 3"
+                  />
+                </div>
+                <div class="col-md-6 order-md-1">
+                  <div
+                    class="carousel-caption d-flex flex-column justify-content-between h-100 align-items-start"
+                  >
+                    <h3 class="mb-0">Batería de larga vida útil</h3>
+                    <p class="mb-3">
+                      Esta batería está diseñada para una vida útil prolongada y un rendimiento confiable.
+                    </p>
+                    <a href="#" class="btn btn-primary">Ver Más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselBaterias"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselBaterias"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="equipamientos-especiales" class="section">
+      <div class="container">
+        <h2 id="font-titulo">Equipamientos Especiales</h2>
+        <p class="section-description">
+          Aquí encontrarás una lista de los equipamientos especiales disponibles en nuestro taller, junto con detalles sobre su instalación y mantenimiento. Además, podrás explorar imágenes y especificaciones técnicas de estos equipamientos.
+        </p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="hover-container">
+              <a href="./img/ambulancia.jpg" data-lightbox="equipamiento">
+                <img src="./img/ambulancia.jpg" alt="Equipamiento Especial 1" class="img-fluid">
+              </a>
+              <div class="hover-content">
+                <div class="hover-text"><a href="./img/ambulancia.jpg" data-lightbox="equipamiento">🔎</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="hover-container">
+              <a href="./img/ambulancia.jpg" data-lightbox="equipamiento">
+                <img src="./img/ambulancia.jpg" alt="Equipamiento Especial 2" class="img-fluid">
+              </a>
+              <div class="hover-content">
+                <div class="hover-text"><a href="./img/ambulancia.jpg" data-lightbox="equipamiento">🔎</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="hover-container">
+              <a href="./img/ambulancia.jpg" data-lightbox="equipamiento">
+                <img src="./img/ambulancia.jpg" alt="Equipamiento Especial 3" class="img-fluid">
+              </a>
+              <div class="hover-content">
+                <div class="hover-text"><a href="./img/ambulancia.jpg" data-lightbox="equipamiento">🔎</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary mt-3">Ver Más</a>
+      </div>
+    </section>
+    
+    <section id="servicios-4x4" class="section">
+      <div class="container">
+        <h2 id="font-titulo">Servicios 4x4</h2>
+        <ul class="servicios-list">
+          <li>Modificaciones de suspensión</li>
+          <li>Instalación de kits de elevación</li>
+          <li>Mejoras de tracción</li>
+          <li>Personalización exterior e interior</li>
+        </ul>
+      </div>
+    </section>
+    
+      
+    
+
+    <!-- Bootstrap JS (al final del body) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script para inicializar el carrusel -->
+    <script>
+      $(document).ready(function () {
+        $("#carouselBaterias").carousel();
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
   </body>
 </html>
