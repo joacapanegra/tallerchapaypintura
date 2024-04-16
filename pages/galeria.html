@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Fotos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.2/css/lightgallery.min.css"
+    />
+    <style>
+      /* Estilos generales */
+      * {
+        background-color: black;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #000000;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        height: 50px;
+        color: white;
+      }
+
+      .logo {
+        max-width: 100vw;
+        height: auto;
+      }
+      .back-arrow {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+      .gallery-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .gallery a {
+        width: 30%; /* Ancho del contenedor de la imagen */
+        margin-bottom: 10px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+      }
+      .gallery img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html"><p>🔙</p></a>
+      <h1>Galería</h1>
+    </header>
+
+    <div class="gallery-container">
+      <div class="gallery">
+        <a href="../img/chapa-pintura.jpg">
+          <img src="../img/chapa-pintura.jpg" alt="Foto 1" />
+        </a>
+        <a href="../img/bateria.jpg">
+          <img src="../img/bateria.jpg" alt="Foto 2" />
+        </a>
+        <a href="../img/camioneta.png">
+          <img src="../img/camioneta.png" alt="Foto 3" />
+        </a>
+        <a href="../img/chapa-pintura.jpg">
+          <img src="../img/chapa-pintura.jpg" alt="Foto 4" />
+        </a>
+        <a href="../img/bateria.jpg">
+          <img src="../img/bateria.jpg" alt="Foto 5" />
+        </a>
+        <a href="../img/camioneta.png">
+          <img src="../img/camioneta.png" alt="Foto 6" />
+        </a>
+        <a href="../img/chapa-pintura.jpg">
+          <img src="../img/chapa-pintura.jpg" alt="Foto 7" />
+        </a>
+        <a href="../img/bateria.jpg">
+          <img src="../img/bateria.jpg" alt="Foto 8" />
+        </a>
+        <a href="../img/camioneta.png">
+          <img src="../img/camioneta.png" alt="Foto 9" />
+        </a>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.2/js/lightgallery.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        lightGallery(document.querySelector(".gallery"), {
+          mode: "lg-fade",
+          download: false,
+        });
+      });
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

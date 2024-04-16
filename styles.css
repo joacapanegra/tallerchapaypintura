@@ -188,6 +188,8 @@ header {
 
 /* --------- SEGUROS -------------*/
 
+/* Estilos específicos para la sección de seguros */
+
 #seguros {
   background-color: black;
   padding: 100px 0;
@@ -198,6 +200,9 @@ header {
 #seguros h2 {
   font-size: 48px;
   margin-bottom: 30px;
+  font-family: "cooper-black-std", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .section-description {
@@ -237,6 +242,67 @@ header {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 5px;
+}
+
+.insurance-list li {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.insurance-list strong {
+  color: #ff5722; /* Color para los títulos de coberturas */
+}
+
+.faq-toggle {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  font-size: 16px;
+}
+
+.faq-answer.active {
+  display: block;
+}
+
+#productos-empresas {
+  background-color: #000;
+  color: white;
+}
+
+#productos-empresas h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+#productos-empresas .insurance-list {
+  list-style: none;
+  padding: 0;
+}
+
+#productos-empresas .insurance-list li {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+#productos-empresas ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+#productos-empresas p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* --------- CHAPA Y PINTURA -------------*/
@@ -253,20 +319,24 @@ header {
   margin-bottom: 30px;
 }
 
-.section-description {
+#chapa-pintura .section-description {
   font-size: 24px;
   margin-bottom: 40px;
-}
-
-#chapa-pintura p {
-  font-size: 20px;
-  margin-bottom: 30px;
   font-family: "cooper-black-std", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.btn {
+#chapa-pintura p,
+#chapa-pintura ul {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "cooper-black-std", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#chapa-pintura .btn {
   padding: 15px 40px;
   font-size: 20px;
   border-radius: 50px;
@@ -275,16 +345,9 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn:hover {
+#chapa-pintura .btn:hover {
   background-color: #f44336;
   color: #fff;
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
 /* --------- BATERIAS -------------*/

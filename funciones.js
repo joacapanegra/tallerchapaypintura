@@ -31,3 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
     this.style.display = "none";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqToggles = document.querySelectorAll(".faq-toggle");
+
+  faqToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function (event) {
+      event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+      const answer = this.nextElementSibling; // Obtén el elemento siguiente (la respuesta)
+
+      // Alternar la clase 'active' para mostrar u ocultar la respuesta
+      answer.classList.toggle("active");
+    });
+  });
+});
