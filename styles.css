@@ -546,6 +546,56 @@ header {
   margin-bottom: 0;
 }
 
+/* --------- CONTACTOS -------------*/
+
+#contact-section {
+  padding: 20px;
+  background-color: #f44336; /* Color de fondo solicitado */
+  color: #ffffff;
+}
+
+#contact-section h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-info,
+.location-info {
+  margin-bottom: 20px;
+  font-family: "cooper-black-std", serif;
+}
+
+.contact-info p,
+.location-info p {
+  margin: 5px 0;
+}
+
+.map-container {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  background-color: #ffffff;
+  color: #333;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+}
+
+/* --------- FOOTER -------------*/
+
+footer {
+  background-color: #000;
+}
+
+footer h4 {
+  color: white;
+  margin-top: 10px;
+}
+
+footer h6 {
+  color: white;
+}
+
 /* --------- FONTS -------------*/
 
 @font-face {

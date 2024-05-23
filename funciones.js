@@ -46,3 +46,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Inicialización del mapa de Google
+function initMap() {
+  var location = { lat: -31.6333, lng: -60.7 }; // Coordenadas de Santa Fe, Argentina
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: location,
+  });
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+}
+
+// Manejo del formulario de contacto
+document
+  .querySelector(".contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert("Formulario enviado. Nos pondremos en contacto contigo pronto.");
+    this.reset();
+  });
